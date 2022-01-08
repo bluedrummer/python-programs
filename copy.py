@@ -1,6 +1,6 @@
 #Hello thank you for using my program
 #This works with Python3
-#What this program do?: Copys the content from a desired file and pastes into a desired file
+#What does this program do?: It copies the content from a desired file and pastes into a desired file
 #How to use: python3 copy.py input.txt(the file you want to read from) output.txt(the file you want to write on)
 #Thank you for using!
 import sys
