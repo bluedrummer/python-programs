@@ -3,9 +3,9 @@
 import sys
 import random
 
-print("By bluedrummer or https://github.com/bluedrummer?tab=repositories at github")
-print("THIS CODE IS TBD")
-print("This is a board game")
+print("By bluedrummer or https://github.com/bluedrummer?tab=repositories at github.")
+print("THIS CODE IS NOT FULLY FINISISHED BUGS MAY BE FOUND")
+print("This is a board game.")
 print()
 print()
 print('''At the start of the game all levers or tiles are open (cleared, up), showing the numerals 1 to 9.
@@ -24,14 +24,14 @@ After every player has taken a turn, the player with the lowest score wins.
 If a player succeeds in closing all of the numbers, that player is said to have Shut the Box – the player wins immediately and the game is over. ''')
 print()
 print()
-print("How many players?")
+print("How many players are playing?")
 player_with_lower_score = 1000
 name_of_player_with_lower_score = ""
 number_of_players = 0
 while True:
     number_of_players = input()
     if not number_of_players.isdecimal():
-        print("Please enter a number")
+        print("Please enter a number.")
     else:
         number_of_players = int(number_of_players)
         break
@@ -41,7 +41,7 @@ for i in range(0, number_of_players):
     print(f"What will be player {i+1}'s name?")
     player_names.append(input())
 print()
-print("Would you like the computer to play (yes or no)")
+print("Would you like the computer to play (yes or no).")
 
 while True:
     computer_playing = input().upper()
@@ -51,7 +51,7 @@ while True:
     elif computer_playing == "NO":
         computer_playing = False
         break
-    print("please enter yes or no")
+    print("Please enter yes or no.")
 
 print()
 
@@ -134,13 +134,13 @@ def shut_the_box_turn(player, player_with_lower_score, name_of_player_with_lower
         total = 0
         if number_of_die_to_roll(box) == 1:
             print()
-            print("Since the sum of the tiles is 6 or lower you may role 1 dice now")
+            print("Since the sum of the tiles is 6 or lower you may role 1 dice now.")
             print()
             print("Here is the box.")
             print()
             print(show_box(box))
             print()
-            print("Do you want to role 1 or 2 die? (Please answer with 1 or 2)")
+            print("Do you want to role 1 or 2 die? (Please answer with 1 or 2).")
             print()
             while True:
                 nb_of_die = input()
@@ -151,7 +151,7 @@ def shut_the_box_turn(player, player_with_lower_score, name_of_player_with_lower
                     number_of_dice_rolling = 1
                     break
                 print()
-                print("Please enter 1 or 2")
+                print("Please enter 1 or 2.")
             print()
         print(f"You rolled the die")
         print()
@@ -179,7 +179,7 @@ def shut_the_box_turn(player, player_with_lower_score, name_of_player_with_lower
                 all_scores.append(player_with_lower_score)
                 all_scores.append(name_of_player_with_lower_score)
                 return all_scores
-            print(f"{player}'s score is {score}")
+            print(f"{player}'s score is {score}.")
             break
         print("Here is the box.")
         print()
@@ -187,7 +187,7 @@ def shut_the_box_turn(player, player_with_lower_score, name_of_player_with_lower
         print()
         print("_________________________________________________________________")
         print()
-        print("Which tiles do you want to shut? (Display your answer like this 1 2 3 )")
+        print("Which tiles do you want to shut? (Display your answer like this 1 2 3).")
         print()
         levers_to_shut = ""
         while True:
@@ -210,7 +210,7 @@ def shut_the_box_turn(player, player_with_lower_score, name_of_player_with_lower
             print("_____________________________________________________________")
             print()
             print(f"Congratulations {player} has WON by SHUTTING THE BOX!!!")
-            print("GAME OVER")
+            print("GAME OVER!")
             print("Hope you enjoyed!")
             sys.exit()
         print("_________________________________________________________________________________")
@@ -222,7 +222,7 @@ for i in range(0, number_of_players):
     print(f"It is now {player_names[i]}'s turn to play")
     stats = shut_the_box_turn(player_names[i], player_with_lower_score, name_of_player_with_lower_score)
     print()
-    print(f"The person with the highest score right now is {stats[1]} with {stats[0]} points.")
+    print(f"The person with the lowest score right now is {stats[1]} with {stats[0]} points.")
     player_with_lower_score = stats[0]
     name_of_player_with_lower_score = stats[1]
 

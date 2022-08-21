@@ -1,7 +1,7 @@
 #Hello thank you for using my program
 #By Bluedrummer or https://github.com/bluedrummer?tab=repositories at github.
 #This works with Python3.
-#What does this propgram do?: This program converts any decimal digit to binary just git it a decimal number.
+#What does this propgram do?: This program converts any decimal digit to binary just give it a decimal number.
 #WARNING!: Numbers with decimal points will not work.
 #Thank you for using.
 
