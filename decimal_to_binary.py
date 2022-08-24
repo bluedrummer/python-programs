@@ -15,7 +15,7 @@ while True:
     decimal_number = input()
     if decimal_number.isdecimal():
         decimal_number = int(decimal_number)
-        break
+        break 
     else:
         print("Please enter a decimal number.")
 
